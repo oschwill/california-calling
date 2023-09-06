@@ -1,0 +1,147 @@
+@use 'general.scss';
+@import './variables.scss';
+@import './extends.scss';
+@import './header.scss';
+
+/** MIXINS **/
+@mixin positioning($left, $top, $overflow, $index) {
+  left: $left;
+  top: $top;
+  overflow: $overflow;
+  z-index: $index;
+}
+
+/*** MAIN CSS ***/
+/*! FIRST SECTION */
+.intro-section {
+  color: $white-color;
+  background-color: $black-color;
+  padding-top: 161px;
+
+  article {
+    h1 {
+      font-size: 9.375rem;
+      line-height: 108.6px;
+      letter-spacing: -2.48px;
+    }
+
+    .article-p {
+      padding-top: 17px;
+
+      &:first-child {
+        padding: 100px 0 0 0;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+      h2 {
+        font-size: 8.675rem;
+        font-weight: 800;
+      }
+    }
+
+    &:last-of-type {
+      background: url('../imgs/map.svg') no-repeat;
+      background-size: 40%;
+      background-position: top right;
+      padding-bottom: 117px;
+    }
+  }
+}
+
+.picture-wall-section {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  article {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 200px;
+
+    img {
+      width: 20%;
+    }
+
+    &:nth-child(1) {
+      img {
+        position: absolute;
+        @include positioning(70%, -100px, visible, 1000);
+      }
+    }
+
+    &:nth-child(2) {
+      div {
+        @extend .wall-block-text;
+
+        h2 {
+          font-size: 8.358rem;
+          font-weight: 800;
+          line-height: 82.3px;
+        }
+      }
+
+      img {
+        position: absolute;
+
+        &:first-of-type {
+          @include positioning(5%, -100px, visible, 1000);
+        }
+
+        &:last-of-type {
+          @include positioning(80%, 300px, hidden, 1000);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      img {
+        position: absolute;
+
+        &:first-of-type {
+          @include positioning(15%, -75px, hidden, 1000);
+        }
+
+        &:last-of-type {
+          @include positioning(70%, 20px, hidden, 1000);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      div {
+        @extend .wall-block-text;
+      }
+
+      img {
+        position: absolute;
+
+        &:first-of-type {
+          @include positioning(0, -30px, visible, 1000);
+        }
+
+        &:last-of-type {
+          @include positioning(50%, 250px, hidden, -1);
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+/** GOLDEN BEAR SECTION **/
+.golden-bear-section {
+  background-color: $black-color;
+
+  article {
+    .golden-bear-images {
+      img {
+        width: 30%;
+        height: 30%;
+      }
+    }
+  }
+}

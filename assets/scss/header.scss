@@ -1,0 +1,47 @@
+/*** HEADER CSS ***/
+
+header {
+  background-color: $black-color;
+
+  .head-section {
+    color: $white-color;
+    height: 100vh;
+    text-align: center;
+    display: grid;
+
+    .head-intro {
+      p {
+        font-family: WorkSans, Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: -0.5px;
+        &:first-of-type {
+          margin-top: 192px;
+        }
+        &:last-of-type {
+          margin-top: 12px;
+        }
+      }
+
+      h1 {
+        width: 100%;
+        font-size: 6.4rem;
+        word-spacing: 1000px;
+        line-height: 51.2px;
+        margin-top: 17px;
+        span {
+          color: $black-color;
+          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+        }
+      }
+    }
+
+    .head-button-logo {
+      align-self: end;
+      display: flex;
+      justify-content: space-between;
+      button {
+        @extend .buttons;
+      }
+    }
+  }
+}
