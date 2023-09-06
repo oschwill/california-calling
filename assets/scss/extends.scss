@@ -1,0 +1,19 @@
+/*** BUTTONS ***/
+.buttons {
+  padding: 1% 2.5%;
+  border: 1px solid $lightgrey-color;
+  background: none;
+  color: $white-color;
+}
+
+.wall-block-text {
+  width: 35%;
+  margin: 0 auto;
+
+  p {
+    padding-top: 5.62px;
+    font-size: 1.58rem;
+    line-height: 29.6px;
+    letter-spacing: -0.41px;
+  }
+}

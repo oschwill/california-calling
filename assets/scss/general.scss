@@ -1,0 +1,26 @@
+/*** GENERAL CSS ***/
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/Inter-VariableFont_slntwght.ttf');
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url('../fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.head-section,
+.intro-section article {
+  margin: 0 10vw;
+}
