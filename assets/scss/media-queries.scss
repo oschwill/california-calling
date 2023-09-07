@@ -1,0 +1,422 @@
+/* POPPY BEAR SECTION */
+@media (max-width: 1600px) {
+  .poppy-bear-section {
+    article {
+      &:last-of-type {
+        .poppy-bear-images {
+          img {
+            &:last-of-type {
+              top: 0;
+              right: 20%;
+              height: 731px;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .poppy-bear-section {
+    article {
+      &:last-of-type {
+        .poppy-bear-images {
+          img {
+            &:last-of-type {
+              top: 0;
+              right: 8%;
+              height: 731px;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  /* INTRO SECTION */
+  .intro-section {
+    article {
+      h1 {
+        font-size: 8rem;
+        line-height: 90px;
+        letter-spacing: -2.48px;
+      }
+    }
+  }
+
+  /* PICTURE WALL SECTION*/
+  .picture-wall-section {
+    article {
+      gap: 25px;
+      margin-bottom: 100px;
+    }
+  }
+
+  /* GOLDEN BEAR SECTION */
+  .golden-bear-section {
+    article {
+      .golden-bear-images {
+        position: relative;
+        height: 600px;
+
+        img {
+          margin-top: 168px;
+          position: absolute;
+
+          &:nth-child(1) {
+            height: 531px;
+            top: -150px;
+            left: 0;
+            z-index: 1000;
+          }
+
+          &:nth-child(2) {
+            height: 273px;
+            top: 0;
+            left: 450px;
+            z-index: 1000;
+          }
+        }
+      }
+
+      .overflow {
+        position: absolute;
+        overflow: visible;
+        margin: 20% 40vw;
+        top: 52%;
+        width: 295px;
+        height: 411px;
+
+        img {
+          height: 411px;
+          z-index: 1000;
+          animation-name: rotating-something;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+      }
+    }
+  }
+
+  /* POPPY BEAR SECTION */
+  .poppy-bear-section {
+    article {
+      &:last-of-type {
+        .poppy-bear-images {
+          width: auto;
+
+          img {
+            &:first-of-type {
+              z-index: 1000;
+              top: 15%;
+              left: 0;
+              height: 373px;
+              width: auto;
+            }
+
+            &:last-of-type {
+              top: 0;
+              right: 10%;
+              height: 600px;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .moving-bar {
+      > * {
+        position: relative;
+        transform: rotate(0);
+      }
+
+      img {
+        height: 75px;
+        width: 100%;
+        top: 0;
+        right: 0;
+      }
+
+      p {
+        top: 15px;
+        bottom: 0;
+        right: 0;
+        left: -150px;
+        font-size: 4rem;
+        animation-name: moving-something-smalller;
+      }
+    }
+    .footer-text {
+      article {
+        &:last-of-type {
+          .right-infos {
+            padding-right: 0;
+            justify-content: flex-end;
+            img {
+              height: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    overflow: hidden;
+  }
+
+  .golden-bear-section {
+    article {
+      &:first-of-type {
+        .bear-article {
+          gap: 100px;
+          .golden-bear-text {
+            p {
+              &:first-of-type {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .poppy-bear-section {
+    margin-bottom: 50px;
+    article {
+      display: block;
+
+      &:first-of-type {
+        margin-bottom: 75px;
+      }
+
+      &:last-of-type {
+        justify-content: inherit;
+
+        .poppy-bear-images {
+          height: auto;
+          margin: 0 15vw;
+          img {
+            position: relative;
+
+            &:first-of-type {
+              z-index: 1000;
+              height: 473px;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /* PICTURE WALL SECTION*/
+  .picture-wall-section {
+    gap: 10px;
+
+    article {
+      &:nth-child(3) {
+        img {
+          &:first-of-type {
+            left: 5%;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        margin-bottom: 250px;
+        img {
+          &:last-of-type {
+            top: 100%;
+            left: 35%;
+          }
+        }
+      }
+    }
+  }
+
+  /* GOLDEN BEAR SECTION */
+  .golden-bear-section {
+    article {
+      &:first-of-type {
+        .bear-article {
+          display: block;
+        }
+      }
+
+      &:last-of-type {
+        .golden-bear-images {
+          img {
+            &:nth-child(1) {
+              height: 431px;
+              top: -150px;
+              left: 0;
+              z-index: 1000;
+            }
+
+            &:nth-child(2) {
+              height: 173px;
+              top: 0;
+              left: 350px;
+              z-index: 1000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* POPPY BEAR SECTION */
+  .poppy-bear-section {
+    article {
+      &:last-of-type {
+        .poppy-bear-images {
+          img {
+            &:last-of-type {
+              height: 367px;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .moving-bar {
+      p {
+        font-size: 2.5rem;
+      }
+    }
+
+    .footer-text {
+      article {
+        &:first-of-type {
+          width: 100%;
+        }
+
+        &:last-of-type {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    .head-section {
+      .head-intro {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  /* INTRO SECTION */
+  .intro-section {
+    article {
+      &:first-of-type {
+        h1 {
+          font-size: 6rem;
+        }
+      }
+
+      &:last-of-type {
+        .article-p {
+          h2 {
+            font-size: 6rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* PICTURE WALL SECTION */
+  .picture-wall-section {
+    article {
+      margin-bottom: 20px;
+      &:nth-child(2) {
+        div {
+          h2 {
+            font-size: 5.5rem;
+          }
+        }
+      }
+    }
+  }
+  /* GOLDEN BEAR SECTION*/
+  .golden-bear-section {
+    article {
+      &:last-of-type {
+        .golden-bear-images {
+          img {
+            &:first-of-type {
+              height: 300px;
+            }
+            &:last-of-type {
+              top: 35px;
+              left: 235px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* POPPY BEAR SECTION */
+  .poppy-bear-section {
+    article {
+      &:last-of-type {
+        .poppy-bear-images {
+          img {
+            &:first-of-type {
+              height: auto;
+              width: 100%;
+            }
+            &:last-of-type {
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* FOOTER */
+  footer {
+    .footer-text {
+      article {
+        &:last-of-type {
+          .right-infos {
+            img {
+              &:first-of-type {
+                height: 50px;
+                width: auto;
+              }
+              &:last-of-type {
+                height: 50px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

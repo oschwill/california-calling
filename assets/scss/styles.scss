@@ -1,249 +1,10 @@
 @use 'general.scss';
 @import './variables.scss';
 @import './extends.scss';
+@import './mixins.scss';
 @import './header.scss';
-
-/** MIXINS **/
-@mixin positioning($left, $top, $overflow, $index) {
-  left: $left;
-  top: $top;
-  overflow: $overflow;
-  z-index: $index;
-}
-
-/*** MAIN CSS ***/
-/*! FIRST SECTION */
-.intro-section {
-  color: $white-color;
-  background-color: $black-color;
-  padding-top: 161px;
-
-  article {
-    h1 {
-      font-size: 9.375rem;
-      line-height: 108.6px;
-      letter-spacing: -2.48px;
-    }
-
-    .article-p {
-      padding-top: 17px;
-
-      &:first-child {
-        padding: 100px 0 0 0;
-      }
-
-      p {
-        font-size: 1.4rem;
-      }
-      h2 {
-        font-size: 8.675rem;
-        font-weight: 800;
-      }
-    }
-
-    &:last-of-type {
-      background: url('../imgs/map.svg') no-repeat;
-      background-size: 40%;
-      background-position: top right;
-      padding-bottom: 117px;
-    }
-  }
-}
-
-.picture-wall-section {
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-
-  article {
-    position: relative;
-    width: 100%;
-    display: flex;
-    gap: 50px;
-    margin-bottom: 300px;
-
-    img {
-      width: 20%;
-    }
-
-    &:nth-child(1) {
-      img {
-        position: absolute;
-        @include positioning(70%, -100px, visible, 1000);
-      }
-    }
-
-    &:nth-child(2) {
-      div {
-        @extend .wall-block-text;
-
-        h2 {
-          font-size: 8.358rem;
-          font-weight: 800;
-          line-height: 82.3px;
-        }
-      }
-
-      img {
-        position: absolute;
-
-        &:first-of-type {
-          @include positioning(5%, -100px, visible, 1000);
-        }
-
-        &:last-of-type {
-          @include positioning(80%, 150px, hidden, 1000);
-        }
-      }
-    }
-
-    &:nth-child(3) {
-      img {
-        position: absolute;
-
-        &:first-of-type {
-          @include positioning(15%, -200px, hidden, 1000);
-        }
-
-        &:last-of-type {
-          @include positioning(70%, 20px, hidden, 1000);
-        }
-      }
-    }
-
-    &:nth-child(4) {
-      margin-bottom: 400px;
-      div {
-        @extend .wall-block-text;
-      }
-
-      img {
-        position: absolute;
-
-        &:first-of-type {
-          @include positioning(0, -125px, visible, 1000);
-        }
-
-        &:last-of-type {
-          @include positioning(50%, 250px, hidden, -1);
-          width: 30%;
-        }
-      }
-    }
-  }
-}
-
-/** GOLDEN BEAR SECTION **/
-.golden-bear-section {
-  background-color: $black-color;
-  margin-bottom: 400px;
-
-  article {
-    position: relative;
-    padding-top: 170px;
-    color: $white-color;
-
-    > p {
-      font-size: 1.975rem;
-      padding-bottom: 23px;
-      line-height: 82.3px;
-    }
-
-    .bear-article {
-      display: flex;
-      justify-content: space-between;
-      column-gap: 250px;
-
-      h2 {
-        font-size: 8.358rem;
-        font-weight: 800;
-      }
-
-      .golden-bear-text {
-        display: flex;
-        flex-direction: column;
-        row-gap: 21.35px;
-
-        p {
-          &:first-of-type {
-            font-size: 2.897rem;
-            font-weight: 800;
-            line-height: 32.9px;
-          }
-
-          &:last-of-type {
-            font-size: 1.843rem;
-            line-height: 29.6px;
-            letter-spacing: -0.41px;
-          }
-        }
-      }
-    }
-
-    .golden-bear-images {
-      position: relative;
-      height: 600px;
-
-      img {
-        margin-top: 168px;
-        position: absolute;
-
-        &:nth-child(1) {
-          height: 731px;
-          top: -150px;
-          left: 0;
-          z-index: 1000;
-        }
-
-        &:nth-child(2) {
-          height: 473px;
-          top: 0;
-          left: 675px;
-          z-index: 1000;
-        }
-      }
-    }
-
-    .overflow {
-      position: absolute;
-      overflow: hidden;
-      right: -12%;
-      top: 42%;
-      width: 295px;
-      height: 411px;
-      margin-top: 20%;
-
-      img {
-        height: 411px;
-        z-index: 1000;
-        animation-name: rotating-something;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-    }
-  }
-}
-
-.poppy-bear-section {
-  article {
-    .poppy-bear-images {
-      img {
-        width: 50%;
-        height: 50%;
-      }
-    }
-  }
-}
-
-/** FOOTER **/
-footer {
-  height: 612px;
-
-  img {
-    height: 100px;
-  }
-}
+@import './main.scss';
+@import './media-queries.scss';
 
 @keyframes rotating-something {
   from {
@@ -251,5 +12,29 @@ footer {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes moving-something {
+  0%,
+  100% {
+    top: 380px;
+    right: -315px;
+  }
+
+  50% {
+    top: 84px;
+    right: -28px;
+  }
+}
+
+@keyframes moving-something-smalller {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translate(50%);
   }
 }
