@@ -5,3 +5,8 @@
   overflow: $overflow;
   z-index: $index;
 }
+
+@mixin hovering($bg-Color, $fontColor) {
+  background-color: $bg-Color;
+  color: $fontColor;
+}

@@ -41,6 +41,10 @@ header {
       justify-content: space-between;
       button {
         @extend .buttons;
+
+        &:hover {
+          @include hovering($white-color, $black-color);
+        }
       }
     }
   }

@@ -34,6 +34,7 @@ html {
   border: 1px solid #aaa;
   background: none;
   color: #fff;
+  transition: 0.25s linear;
 }
 
 .wall-block-text, .picture-wall-section article:nth-child(4) div, .picture-wall-section article:nth-child(2) div {
@@ -85,6 +86,11 @@ header .head-section .head-button-logo {
   display: flex;
   justify-content: space-between;
 }
+header .head-section .head-button-logo button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 /*** MAIN CSS ***/
 /*! FIRST SECTION */
 .intro-section {
@@ -385,6 +391,10 @@ footer .footer-text article:first-of-type p:last-of-type {
 }
 footer .footer-text article:first-of-type button {
   width: 15%;
+}
+footer .footer-text article:first-of-type button:hover {
+  background-color: #fff;
+  color: #000;
 }
 footer .footer-text article:last-of-type {
   display: flex;

@@ -350,6 +350,10 @@ footer {
         button {
           @extend .buttons;
           width: 15%;
+
+          &:hover {
+            @include hovering($white-color, $black-color);
+          }
         }
       }
 
