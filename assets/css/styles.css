@@ -34,6 +34,7 @@ html {
   border: 1px solid #aaa;
   background: none;
   color: #fff;
+  cursor: pointer;
   transition: 0.25s linear;
 }
 
